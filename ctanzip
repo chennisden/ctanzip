@@ -37,8 +37,9 @@ do
 		continue
 	fi
 
-	BASENAME=${var%/##*/}  
-
+	NORMALPATH=$(echo $var | sed 's:/*$::')
+	BASENAME=${NORMALPATH##*/}
+	echo $BASENAME
 	# Check if it's a git repo
 	if [ -d "$var/.git" ];
 	then
