@@ -46,7 +46,7 @@ do
 		# Clone repo, remove .git and .gitignore
 		git clone $var "temp-$BASENAME/$BASENAME"
 		rm -rf "temp-$BASENAME/$BASENAME/.git"
-		rm -rf "temp-$BASENAME/$BASENAME.gitignore"
+		rm -rf "temp-$BASENAME/$BASENAME/.gitignore"
 	else
 		# Copy dir, ignoring all hidden files
 		rsync -a --exclude='.*' $var "temp-$BASENAME/$BASENAME"
